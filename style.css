@@ -1,0 +1,89 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(194, 221, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: brown;
+  margin-bottom: 1rem;
+}
+
+#message {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: rgb(176, 60, 60);
+}
+
+.board-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  background-color: rgb(16, 145, 200);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #e0f2fe;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f80505;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 8px;
+  border: 2px solid #93c5fd;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cell:hover {
+  background-color: lightblue;
+}
+
+button#restart {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: rgb(97, 15, 115);
+  border: 2px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#restart:hover {
+  background-color: rgb(97, 15, 115);
+  color: white;
+  border: 2px solid white;
+}
+
+/* Strike line */
+.strike {
+  position: absolute;
+  height: 5px;
+  background-color: black;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  width: 0;
+  transform: rotate(0deg);
+  transform-origin: left center;
+  transition: all 0.3s ease;
+}
